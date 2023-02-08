@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+body {
+  background-color: #EAE3D2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+#card-main {
+  background-color: #FFFFFF;
+  width: 800px;
+  margin: 30px auto;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+.white-card {
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 20px;
+
+}
+
+.div-grid {
+  display: flex;
+  padding: 0px;
+  border: none;
+}
+
+#screen-left {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0;
+  border-right: none;
+  padding: 70px 40px;
+  background-color: #FFE867;
+
+}
+
+#screen-right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 70px 40px;
+}
+
+h1, h2 {
+  color: #000000;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
+h2{
+  font-size: 25px;
+}
+
+.img-center {
+  display: block;
+  text-align: center;
+}
+
+.img-circle {
+  width: 200px;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-blue > a {
+  background-color: #89C4E1;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 70%;
+  display: inline-block;
+}
+
+.btn-blue > a:hover{
+  background-color: rgb(137, 196, 225, 0.2);
+  border: 1px solid #89C4E1;
+  transition: 0.5s;
+  color: #89C4E1;
+}
+
+#spotify-color:hover {
+  color: #1db954;
+  transition: 0.5s;
+}
+
+#instagram-color:hover {
+  color: #E1306C;
+  transition: 0.5s;
+}
+
+#soundcloud-color:hover {
+  color: #FF7F34;
+  transition: 0.5s;
+}
+
+.inline-logos > li {
+  list-style-type: none;
+  padding: 0px;
+  display: inline-block;
+  font-size: 30px;
+  letter-spacing: 20px;
+}
+
+.inline-logos {
+  padding: 0px;
+}
+
+.links-list {
+  /* background-color: #89C4E1; */
+  border-bottom: 1px solid black;
+  background-color: #89C4E1;
+}
+
+#bio {
+  margin: 10 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.footer {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.footer > h2 {
+  line-height: 20px;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  #card-main {
+    width: 700px;
+  }
+
+  .div-grid {
+    display: flex;
+    padding: 0px;
+    border: none;
+  }
+
+  #screen-left {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;
+    border-right: none;
+    padding: 70px 40px;
+    background-color: #FFE867;
+
+  }
+
+  #screen-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 70px 40px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  #card-main {
+    width: 500px;
+
+  }
+  .div-grid {
+    padding: 0px;
+    border: none;
+    display: block;
+  }
+
+  #screen-left {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-right: 1px solid black;
+    /* padding: 70px 40px; */
+    background-color: #FFE867;
+
+  }
+
+  #screen-right {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  #card-main {
+    width: 300px;
+  }
+  .div-grid {
+    padding: 0px;
+    border: none;
+    display: block;
+  }
+
+  #screen-left {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-right: 1px solid black;
+    /* padding: 70px 40px; */
+    background-color: #FFE867;
+
+  }
+
+  #screen-right {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 40px;
+  }
+}
