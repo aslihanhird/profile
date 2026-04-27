@@ -1,12 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Ballet:opsz@16..72&family=Monsieur+La+Doulaise&display=swap');
 
 
 body {
   background-color: #EAE3D2;
-  font-family: 'Poppins', sans-serif;
+  /* background-image: url('images/light_texture.jpg'); */
+  background-image: url('images/dark_texture.jpg');
+  /* background-color: #D5C8C3; */
+  background-color: #132152;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Afacad Flux', sans-serif;
   font-size: 18px;
   text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.header {
+  padding: 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.title-stack {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.cursive {
+  font-family: 'Monsieur La Doulaise', cursive;
+  /* font-family: 'Ballet', cursive; */
+  font-size: clamp(1rem, 5vw, 3rem);
+  /* font-size: clamp(2rem, 9vw, 8rem); */
+  color: #f2efcb;
+  /* color: #e15136; */
+  /* color: #132152; */
+  font-weight: 500;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -15%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  white-space: nowrap;
+  line-height: 0.8em;
+}
+
+.bold {
+  /* font-family: "Afacad Flux", sans-serif; */
+  font-family: "Rubik Dirt", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 9vw, 8rem);
+  /* color: #132152; */
+  color: #e15136;
+  /* color: #83888F; */
+  margin: 0;
+  line-height: 0.8em;
+  font-variation-settings:
+    "slnt" 0;
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+/*
+.subtitle {
+  font-family: 'Monsieur La Doulaise', cursive;
+} */
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  color: #f2efcb;
+  padding-top: .5rem;
+  padding-right: .35rem;
+}
+
+.streaming-platforms {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #f2efcb;
+}
+
+.streaming-platforms > a {
+  color: #f2efcb;
+}
+
+#spotify:hover {
+  color: #1db954;
+  transition: 0.5s;
+}
+
+#instagram:hover {
+  color: #E1306C;
+  transition: 0.5s;
+}
+
+#tidal:hover {
+  color: black;
+  transition: 0.5s;
 }
 
 #card-main {
