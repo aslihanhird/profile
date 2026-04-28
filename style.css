@@ -23,7 +23,7 @@ background-image: url('images/dark_texture.jpg');
 .header {
   padding: 0;
   /* width: var(--content-width); */
-  background-image: url('images/pp1.jpg');
+  background-image: url('images/pic1.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
