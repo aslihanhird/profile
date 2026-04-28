@@ -9,7 +9,7 @@
 
 
 body {
-  background-image: url('images/dark_texture.jpg');
+background-image: url('images/dark_texture.jpg');
   background-color: #132152;
   background-blend-mode: luminosity;
   background-size: cover;
@@ -17,18 +17,23 @@ body {
   font-family: 'Afacad Flux', sans-serif;
   font-size: 18px;
   text-align: center;
-  padding: 10px 0;
   margin: 0;
 }
 
 .header {
   padding: 0;
   /* width: var(--content-width); */
+  background-image: url('images/pp1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   width: 100%;
-  margin: 1.25rem auto 0;
+  padding: 1.25rem auto 0;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 
 .title-stack {
@@ -46,7 +51,7 @@ body {
   margin: 0;
   position: absolute;
   left: 50%;
-  bottom: -15%;
+  bottom: -5%;
   transform: translate(-50%, -50%);
   z-index: 2;
   white-space: nowrap;
@@ -61,12 +66,14 @@ body {
   /* font-size: clamp(2rem, 9vw, 8rem); */
   font-size: calc(185 / 1512 * 100vw);
   color: #e15136;
+  /* color: #132152; */
   margin: 0;
   line-height: 0.8em;
   font-variation-settings: "slnt" 0;
   position: relative;
   display: block;
   z-index: 1;
+  text-shadow: 2px 2px 5px rgba(37, 22, 8, 0.5);
 }
 
 .subtitle {
@@ -94,6 +101,10 @@ body {
 
 .streaming-platforms > a, .subtitle > a {
   color: #f2efcb;
+}
+
+i {
+  text-shadow: 2px 2px 10px rgba(37, 22, 8, 0.5);
 }
 
 a {
@@ -128,33 +139,75 @@ a {
 .image {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "image info";
+.data {
   width: var(--content-width);
   margin: 1.25rem auto 0;
-  gap: 2rem;
+  h2 {
+    font-family: 'Monsieur La Doulaise', cursive;
+    color: #f2efcb;
+    font-weight: 500;
+    font-size: 3rem;
+  }
 }
-
-.grid .image {
+/*
+.data .image {
   grid-area: image;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+
+.info {
+  --info-bg: #d5c8c3;
+  --tooth-w: 16px;
+  --tooth-h: 10px;
+  --tooth-color: var(--info-bg);
+
+  max-height: fit-content;
+  position: relative;
+  background-color: var(--info-bg);
+  padding: 1rem;
+  width: fit-content;
+  margin: 7rem auto;
+  margin-top: 5rem;
 }
 
-.grid .info {
-  grid-area: info;
-  min-height: 320px;
-  background-color: #d5c8c3;
-  padding: 1rem;
-  /* background-image: url('images/dotted_texture.jpeg');
-  background-size: cover;
-  background-blend-mode: luminosity; */
+.data .info::before,
+.data .info::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--tooth-h);
+  pointer-events: none;
+
+  background:
+    linear-gradient(135deg, transparent 75%, var(--info-bg) 75%) 0 50%,
+    linear-gradient(-135deg, transparent 75%, var(--info-bg) 75%) 0 50%;
+
+  background:
+    -moz-linear-gradient(-135deg, transparent 75%, var(--info-bg) 75%) 0 50%,
+    -moz-linear-gradient( -45deg, transparent 75%, var(--info-bg) 75%) 0 50%;
+
+  background:
+    -webkit-linear-gradient(-135deg, transparent 75%, var(--info-bg) 75%) 0 50%,
+    -webkit-linear-gradient( -45deg, transparent 75%, var(--info-bg) 75%) 0 50%;
+
+  background-repeat: repeat-x;
+  background-size:10px 12px, 10px 10px;
+}
+
+.data .info::before {
+  top: calc(-1 * var(--tooth-h));
+}
+
+.data .info::after {
+  bottom: calc(-1 * var(--tooth-h));
+  transform: scaleY(-1);
 }
 
 .track {
@@ -195,10 +248,7 @@ a {
     justify-content: center;
     gap: 1rem;
   }
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "info"
-      "image";
+  .info {
+    margin: 3rem auto;
   }
 }
