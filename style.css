@@ -7,13 +7,18 @@
   --content-width: min(1100px, 94vw);
 }
 
+/* iframe {
+  border: none;
+
+} */
 
 body {
-background-image: url('images/dark_texture.jpg');
+  background-image: url('images/background.png');
   background-color: #132152;
   background-blend-mode: luminosity;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Afacad Flux', sans-serif;
   font-size: 18px;
   text-align: center;
